@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="author" content="Justin" />
+    <meta charset="UTF-8">
+    <title>response</title>
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito">
+    <script src="packages/jQuery.3.5.1/Content/Scripts/jquery-3.5.1.js"></script>
+</head>
+<body>
+    <!-- navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-left-container">
+            <div class="navbar-main-titles">
+                <a href="index.html">Home</a>
+            </div>
+        </div>
+
+        <div class="navbar-center-container">
+            <div class="dropdown">
+                <button class="drop-down-button ">Products</button>
+        
+                <div class="dropdown-content">
+                    <a class="current-page">Products</a>
+                    <a href="products.html#on-sale">On sale</a>
+                    <a href="products.html#popular-products">Popular products</a>
+                    <a href="products.html#recommended-products">Recommended products</a>
+                    <a href="products.html#product-inventory">Product inventory</a>
+                </div>
+            </div>
+            
+            <div class="dropdown">
+                <button class="drop-down-button">About</button>
+        
+                <div class="dropdown-content">
+                    <a href="about.html">about</a>
+                    <a href="about.html#about-employees">About employees</a>
+                    <a href="about.html#news-about-good-gums">News about good gums</a>
+                    <a href="about.html#history-of-good-gums">History of good gums</a>
+                    <a href="about.html#achievements-of-good-gums">Achievements of good gums</a>
+                </div>
+            </div>
+            
+            <div class="navbar-main-titles">
+                <a href="order.html">Order</a>
+            </div>
+        </div>
+
+        <div class="navbar-right-container">
+            <div class="navbar-main-titles">
+                <a href="sitemap.html">Site map</a>
+            </div>
+        </div>
+    </nav>
+    
+    <header><h1>Order Comfirmation</h1></header>
+    
+    <main>
+
+        <!-- table for displaying order information-->
+        <table>
+            <tr>
+                <td ><div class="title">Full name:</div></td>
+                <td id="full-name" class="content">--</td>
+            </tr>
+            <tr>
+                <td><div class="title">E-mail:</div></td>
+                <td id="email" class="content">--</td>
+            </tr>
+            <tr>
+                <td><div class="title">Plant:</div></td>
+                <td id="plant" class="content">--</td>
+            </tr>
+            <tr>
+                <td><div class="title">Plant stage:</div></td>
+                <td id="plant-stage" class="content">--</td>
+            </tr>
+            <tr>
+                <td><div class="title">Message:</div></td>
+                <td id="message" class="content">--</td>
+            </tr>
+        </table>
+    </main>
+
+    <!-- footer containing contact information, validation images, GoodGums logo and copyright statement-->
+    <footer>
+        <div class="footer-container">
+            <div class="contact-us-container">
+                <ul>
+                    <li>contact us:</li>
+                    <li>Email: admin@goodgums.com.au</li>
+                    <li>phone: 9300 0000</li>
+                </ul>
+            </div>
+
+            <div class="validation-images-container-2">
+                <div class="validation-image">
+                    <a href="https://validator.w3.org">
+                        <img src="images/HTML5.png" alt="valid_html5" height="64" />
+                    </a>
+                </div>
+
+                <div class="validation-image">
+                    <a href="https://jigsaw.w3.org/css-validator">
+                        <img src="images/CSS3.png" alt="valid_css3" height="64" />
+                    </a>
+                </div>
+            </div>
+
+            <div class="small-logo-container">
+                <img src="images/GoodGums-logo-sm.png" alt="GoodGums-logo-sm" height="65">
+            </div>
+        </div>
+        <p>Good Gums 2020</p>
+    </footer>
+
+    <!-- script for response.js-->
+    <script src="response.js"></script>
+</body>
+</html>

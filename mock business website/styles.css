@@ -1,0 +1,1025 @@
+/*custom colors for dark and light mode */
+@media (prefers-color-scheme: dark) {
+    body {
+        padding: 0;
+        margin-top: 40px;
+        color: rgb(252, 255, 234);
+        background-color: #1F2022;
+        font-family: Nunito, sans-serif;
+        font-weight: 400;
+        text-align: center;
+    }
+
+    .contact-box {
+        color: white;
+    }
+    
+    .select-box {
+        color: white;
+    }
+    
+    .message-box {
+        color: white;
+    }
+    
+    input:focus {
+        outline: none !important;
+        box-shadow: 0 0 10px #719ECE;
+    }
+    
+    textarea:focus {
+        outline: none !important;
+        box-shadow: 0 0 10px #719ECE;
+    }
+    
+    .container-for-checkbox:hover input ~ .checkmark {
+        outline: none !important;
+        box-shadow: 0 0 10px #719ECE;
+    }
+    
+    .navbar {
+        background-color: rgba(26, 26, 26, 0.9);
+    }
+    
+    .dropdown-content {
+        background-color: rgba(26, 26, 26, 0.9);
+        box-shadow: 0 8px 16px 0 rgba(26, 26, 26, 0.9);
+    }
+    
+    .navbar a:hover, .dropdown:hover .drop-down-button {
+        background-color: rgba(106, 106, 106, 0.9);
+    }
+    
+    .dropdown-content a:hover {
+        background-color: rgba(106, 106, 106, 0.9);
+    }
+
+    tr {
+        background: #1F2022;
+    }
+    
+    .index-header-image-1 {
+        filter: brightness(75%);
+    }
+}
+@media (prefers-color-scheme: light) {
+    body {
+        padding: 0;
+        margin-top: 40px;
+        color: #1F2022;
+        background-color: white;
+        font-family: Nunito, sans-serif;
+        font-weight: 400;
+        text-align: center;
+    }
+
+    .contact-box {
+        color: #1F2022;
+    }
+    
+    .select-box {
+        color: #1F2022;
+    }
+    
+    .message-box {
+        color:  #1F2022;
+    }
+    
+    input:focus {
+        outline: none !important;
+        box-shadow: 0 0 10px #1F2022;
+    }
+    
+    textarea:focus {
+        outline: none !important;
+        box-shadow: 0 0 10px #1F2022;
+    }
+
+    .container-for-checkbox:hover input ~ .checkmark {
+        outline: none !important;
+        box-shadow: 0 0 10px #1F2022;
+    }
+    
+    .navbar {
+        background-color: rgba(106, 106, 106, 0.9);
+    }
+    
+    .dropdown-content {
+        background-color: rgba(106, 106, 106, 0.9);
+        box-shadow: 0 8px 16px 0 rgba(106, 106, 106, 0.9);
+    }
+
+    .navbar a:hover, .dropdown:hover .drop-down-button {
+        background-color: rgba(26, 26, 26, 1);
+    }
+    
+    .dropdown-content a:hover {
+        background-color: rgba(26, 26, 26, 1);
+    }
+
+    tr {
+        background: white;
+    }
+
+    .index-header-image-1 {
+        filter: brightness(85%);
+    }
+}
+
+/*position the navbar */
+.navbar {
+    z-index: 10000;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 0;
+}
+
+/* make all navbar titles the same size */
+.navbar-main-titles {
+    align-items: center;
+}
+
+/* make all navbar <button> titles the same size */
+.navbar button {
+    width: 86px;
+    height: 29px;
+    border: 2px solid transparent;
+    padding: 2px;
+}
+
+/* center <a> text and add padding */
+.navbar-main-titles a {
+    margin: 3px;
+    height: 26px;
+    width: 86px;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+/* format navbar <a> */
+.navbar a {
+    display: flex;
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    font-size: 100%;
+    font-weight: 600;
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+}
+
+/* format navbar <a>, dropdown and drop-down-button when hovering */
+.navbar a:hover, .dropdown:hover .drop-down-button {
+    border-top: 2px solid rgba(147, 205, 130, 100);
+    border-bottom:2px solid rgba(246, 148, 30, 100);
+    border-left: 2px transparent;
+    border-right: 2px transparent;
+    background-image:
+            linear-gradient(rgba(147, 205, 130, 100),rgba(246, 148, 30, 100)),
+            linear-gradient(rgba(147, 205, 130, 100),rgba(246, 148, 30, 100));
+    background-size:2px 100%;
+    background-position:0 0, 100% 0;
+    background-repeat:no-repeat;
+    color: white;
+}
+
+/* format current page */
+.current-page {
+    background-image:
+            linear-gradient(to bottom,rgba(147, 205, 130, 100),rgba(246, 148, 30, 100));
+    background-repeat:no-repeat;
+    pointer-events: none;
+    cursor: default;
+    text-align: center;
+    align-items: center;
+    align-self: center;
+}
+
+/* layout middle navbar titles */
+.navbar-center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* layout left navbar titles */
+.navbar-left-container {
+    margin-left: 9px;
+}
+
+/* layout right navbar titles */
+.navbar-right-container {
+    margin-right: 9px;
+}
+
+/* layout dropdown navbar menu */
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+/* format dropdown drop-down-button */
+.dropdown .drop-down-button {
+    border: 2px solid transparent;
+    outline: none;
+    background: transparent;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 3px;
+    font-size: 100%;
+    font-weight: 600;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 2px;
+}
+
+/* layout dropdown-content */
+.dropdown-content {
+    border: 2px solid transparent;
+    display: none;
+    position: absolute;
+    max-width: max-content;
+    z-index: 1;
+    padding: 3px;
+}
+
+/* format dropdown-content a*/
+.dropdown-content a {
+    float: none;
+    color: rgba(255, 255, 255, 0.9);
+    padding: 8px 12px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+/* format dropdown-content a for hover*/
+.dropdown-content a:hover {
+    border-top: 2px solid  rgba(147, 205, 130, 100);
+    border-bottom:2px solid rgba(246, 148, 30, 100);
+    border-left: 2px transparent;
+    border-left: 2px transparent;
+    background-image:
+            linear-gradient(rgba(147, 205, 130, 100),rgba(246, 148, 30, 100)),
+            linear-gradient(rgba(147, 205, 130, 100),rgba(246, 148, 30, 100));
+    background-size:2px 100%;
+    background-position:0 0, 100% 0;
+    background-repeat:no-repeat;
+}
+
+/* layout .dropdown:hover dropdown-content */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/*format <a> */
+a {
+    font-weight: bolder;
+    font-size: 22px;
+}
+
+/*format <p> */
+p {
+    font-size: 19px;
+}
+
+/*format <h1> */
+h1 {
+    font-size: 70px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    margin: 20px;
+}
+
+/*format <h3> */
+h3 {
+    font-size: 35px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    margin: 10px;
+}
+
+/*format <h4> */
+h4 {
+    font-size: 25px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    margin: 10px;
+}
+
+/*format <ul> */
+ul {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    list-style-type: none;
+    font-size: 19px;
+}
+
+/*layout for employee-gallery-container*/
+.employee-gallery-container {
+    display: grid;
+    grid-gap: 20px;
+    grid-template: repeat(1, 1fr) / repeat(4, 1fr);
+    margin: 10px;
+}
+
+/*layout for gallery-container*/
+.gallery-container {
+    display: grid;
+    grid-gap: 20px;
+    grid-template: repeat(1, 1fr) / repeat(3, 1fr);
+    margin: 10px;
+}
+
+/*format for gallery*/
+.gallery {
+    height: fit-content;
+    align-self: center;
+    padding:5px;
+    border-top: 3px solid rgba(147, 205, 130, 100);
+    border-bottom:3px solid rgba(246, 148, 30, 100);
+    border-left: transparent;
+    border-right: transparent;
+    background-image:
+            linear-gradient(rgba(147, 205, 130, 100),rgba(246, 148, 30, 100)),
+            linear-gradient(rgba(147, 205, 130, 100),rgba(246, 148, 30, 100));
+    background-size:3px 100%;
+    background-position:0 0, 100% 0;
+    background-repeat: no-repeat;
+}
+
+/*format for gallery <img>*/
+.gallery img {
+    height: auto;
+    width: 100%;
+    min-width: 25%;
+}
+
+/*format for gallery text-for-image*/
+.text-for-image {
+    text-align: center;
+    font-weight: 600;
+    width: max-content;
+    margin: 0 auto;
+    /*font-size: 24px;*/
+    font-size: clamp(15px, 1.5vw, 20px);
+}
+
+/*format for <p>*/
+.p-container {
+    margin: auto auto 2%;
+    width: 80%;
+    align-self: center;
+    padding:5px;
+}
+
+/*format for <p>*/
+.p-container-top-bottom-margin-0 {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+/*layout and format for news-story-container*/
+.news-story-container {
+    margin: auto auto 2%;
+    width: 80%;
+    align-self: center;
+    padding:5px;
+    border-top: 3px solid rgba(147, 205, 130, 100);
+    border-bottom:3px solid rgba(246, 148, 30, 100);
+    border-left: transparent;
+    border-right: transparent;
+    background-image:
+            linear-gradient(rgba(147, 205, 130, 100),rgba(246, 148, 30, 100)),
+            linear-gradient(rgba(147, 205, 130, 100),rgba(246, 148, 30, 100))
+;
+    background-size:3px 100%;
+    background-position:0 0, 100% 0;
+    background-repeat: no-repeat;
+}
+
+/*layout and format for contact-box */
+.contact-box {
+    background-color: transparent;
+    width: 250px;
+    height: 25px;
+    padding-left: 5px;
+    border-top: 2px solid rgba(147, 205, 130, 100);
+    border-bottom:2px solid rgba(246, 148, 30, 100);
+    border-left: transparent;
+    border-right: transparent;
+    background-image:
+            linear-gradient(rgba(147, 205, 130, 100),rgba(246, 148, 30, 100)),
+            linear-gradient(rgba(147, 205, 130, 100),rgba(246, 148, 30, 100))
+;
+    background-size:2px 100%;
+    background-position:0 0, 100% 0;
+    background-repeat:no-repeat;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/*layout and format for select-box*/
+.select-box {
+    background-color: transparent;
+    content: none;
+    width: 261px;
+    height: 33px;
+    padding-left: 3px;
+    border-top: 2px solid rgba(147, 205, 130, 100);
+    border-bottom: 2px solid rgba(246, 148, 30, 100);
+    border-left: transparent;
+    border-right: transparent;
+    background-image: linear-gradient(rgba(147, 205, 130, 100), rgba(246, 148, 30, 100)),
+    linear-gradient(rgba(147, 205, 130, 100), rgba(246, 148, 30, 100));
+    background-size: 2px 100%;
+    background-position: 0 0, 100% 0;
+    background-repeat: no-repeat;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/*layout for name-label*/
+.name-label {
+    font-size: 20px;
+    margin-left: -12px;
+}
+
+/*layout for select-label*/
+.select-label {
+    font-size: 20px;
+    margin-left: -61px;
+}
+
+/*layout for email-label*/
+.email-label {
+    font-size: 20px;
+    margin-left: 17px;
+}
+
+/*format and layout for message-box*/
+.message-box {
+    background-color: transparent;
+    width: 80%;
+    height: 150px;
+    padding-left: 9px;
+    border-top: 3px solid rgba(147, 205, 130, 100);
+    border-bottom:3px solid rgba(246, 148, 30, 100);
+    border-left: transparent;
+    border-right: transparent;
+    background-image:
+            linear-gradient(rgba(147, 205, 130, 100),rgba(246, 148, 30, 100)),
+            linear-gradient(rgba(147, 205, 130, 100),rgba(246, 148, 30, 100));
+    background-size:3px 100%;
+    background-position:0 0, 100% 0;
+    background-repeat:no-repeat;
+    font-size: 16px;
+}
+
+/*layout for message-box */
+.message-container {
+    margin: 10px;
+}
+
+/*layout for label textarea */
+label textarea{
+    vertical-align: middle;
+    display: inline-block;
+}
+
+/*format for button */
+.button {
+    border-radius: 10px;
+    padding-left: 5px;
+    border: none;
+    background-image:
+            linear-gradient(to bottom,rgba(147, 205, 130, 100),rgba(246, 148, 30, 100));
+    background-repeat:no-repeat;
+    text-align: center;
+    font-size: 22px;
+    transition-duration: 0.4s;
+}
+
+/*format for button:hover */
+.button:hover {
+    color: white ;
+    border-radius: 10px;
+    background-color: black;
+    text-align: center;
+    font-size: 29px;
+    transition-duration: 0.4s;
+}
+
+/* format size for checkbox */
+.container-for-checkbox {
+    font-size: 22px;
+}
+
+/*hide default checkbox */
+.container-for-checkbox input {
+    position: absolute;
+    opacity: 0.00001;
+    cursor: pointer;
+    height: 17px;
+    width: 17px;
+}
+
+/*format and layout for custom checkbox */
+.checkmark {
+    display: inline-block;
+    top: 0;
+    left: 0;
+    height: 19px;
+    width: 19px;
+    border-radius: 10%;
+    background-image:
+            linear-gradient(to bottom,rgba(246, 148, 30, 100),rgba(147, 205, 130, 100));
+    background-repeat:no-repeat;
+    transition-duration: 0.4s;
+}
+
+/*format for custom checkbox when checked*/
+.container-for-checkbox input:checked ~ .checkmark {
+    background-image:
+            linear-gradient(to bottom,rgba(147, 205, 130, 100),rgba(246, 148, 30, 100));
+    background-repeat:no-repeat;
+}
+
+/*format for custom checkbox when checked*/
+.container-for-checkbox input:checked ~ .checkmark:after {
+    content: "";
+    display: block;
+    position: relative;
+    margin-left: 28%;
+}
+
+/*format for custom checkbox tick when checked*/
+.container-for-checkbox .checkmark:after {
+    width: 4px;
+    height: 14px;
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/* layout for custom radio */
+.radio-container label {
+    margin-left: -12%;
+}
+
+/* layout for custom radio <p> */
+.radio-container p {
+    display: inline-block;
+    position: relative;
+    left: -43px;
+    margin-left: -60.4%;
+}
+
+/* layout for custom radio */
+.radio-container {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: max-content;
+}
+
+/* layout for custom radio-text */
+.radio-text {
+    display: block;
+    text-align: left;
+    width: max-content;
+    margin-left: 30px;
+    line-height: 21px;
+}
+
+/* layout for custom radio */
+.container-for-radio {
+    display: inline-block;
+    position: relative;
+    margin-bottom: 5px;
+    margin-right: 55px;
+    width: 22%;
+    font-size: 20px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* hide default radio */
+.container-for-radio input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/*layout and format for custom checkmark-radio */
+.checkmark-radio {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-image:
+            linear-gradient(to bottom,rgba(246, 148, 30, 100),rgba(147, 205, 130, 100));
+    background-repeat:no-repeat;
+    border-radius: 50%;
+    transition-duration: 0.4s;
+}
+
+/*format for custom container-for-radio input:checked checkmark-radio */
+.container-for-radio input:checked ~ .checkmark-radio {
+    background-image:
+            linear-gradient(to bottom,rgba(147, 205, 130, 100),rgba(246, 148, 30, 100));
+    background-repeat:no-repeat;
+}
+
+/* layout for checkmark-radio:before*/
+.checkmark-radio:before {
+    position: absolute;
+    opacity: 0;
+}
+
+/* layout for container-for-radio input:checked checkmark-radio:after*/
+.container-for-radio input:checked ~ .checkmark-radio:after {
+    content: "";
+    position: absolute;
+    display: block;
+    margin-left: 15%;
+    margin-top: 15%;
+}
+
+/*format for custom container-for-radio checkmark-radio:after */
+.container-for-radio .checkmark-radio:after {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: black;
+}
+
+/*layout and format for table*/
+table {
+    background-image:
+            linear-gradient(to bottom,rgba(147, 205, 130, 100),rgba(246, 148, 30, 100));
+    background-color: transparent;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 80%;
+}
+
+/*layout and format for td*/
+td {
+    padding-left: 5px;
+    padding-right: 5px;
+    vertical-align: top;
+}
+
+/*layout and format for title table*/
+.title {
+    width: max-content !important;
+    float: right;
+}
+
+/*layout and format for title content*/
+.content {
+    float: left;
+    word-break: break-all;
+}
+
+/*layout and format for contact-us-container*/
+.contact-us-container {
+    width: max-content;
+    float: left;
+    text-align: left;
+}
+
+/*layout and format for small-logo-container*/
+.small-logo-container {
+    width: max-content;
+    float: right;
+    padding-left: 44px;
+}
+
+/*layout and format for validation-images-container for when small logo is to the 
+right*/
+.validation-images-container-2 {
+    display: grid;
+    grid-template: repeat(1, 1fr) / repeat(2, 1fr);
+    width: max-content;
+    margin: 0 auto;
+}
+
+/*layout and format for validation-images-container for when small logo is not to the 
+right*/
+.validation-images-container {
+    display: grid;
+    grid-template: repeat(1, 1fr) / repeat(2, 1fr);
+    width: max-content;
+    margin: 0 auto; 
+    padding-right: 224px;
+}
+
+/*layout for footer to keep everything on one line */
+.footer-container {
+    display: flex;
+    margin-top: 1%;
+}
+
+/*layout for footer validation-image */
+.validation-image {
+    height: fit-content;
+    width: fit-content;
+    align-self: center;
+    padding:5px;
+}
+
+/*layout for contact-us-container ul */
+.contact-us-container ul{
+    margin: 0;
+    font-size: 16px;
+    padding: 0;
+}
+
+.sitemap-header-link {
+    font-size: 35px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    margin: 10px;
+}
+
+/*format for sitemap a */
+.sitemap a {
+    color: rgba(147, 205, 130, 100);
+}
+
+/*format for sitemap a:hover */
+.sitemap a:hover {
+    color: rgba(246, 148, 30, 100);
+}
+
+/*layout for sitemap-container-1 top line of sit maps*/
+.sitemap-container-1 {
+    display: grid;
+    grid-gap: 20px;
+    grid-template: repeat(1, 1fr) / repeat(3, 1fr);
+    margin-left: 10%;
+    margin-right: 10%;
+    
+}
+
+/*layout for sitemap-container-1 bottom line of sit maps*/
+.sitemap-container-2 {
+    display: grid;
+    grid-gap: 20px;
+    grid-template: repeat(1, 1fr) / repeat(2, 1fr);
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+/*layout for disclosure-indicator ">"*/
+.disclosure-indicator {
+    display: inline-block;
+}
+
+/*layout for sitemap*/
+.sitemap {
+    height: fit-content;
+    padding:5px;
+    
+}
+
+/*layout for sitemap-heading*/
+.sitemap-heading {
+    display: inline-flex;
+    margin: 0;
+    padding: 10px 0 3px;
+    cursor: pointer;
+}
+
+/*to rotate disclosure-indicator*/
+.rotated {
+    transform: rotate(90deg);
+}
+
+/*layout for sitemap-link-list*/
+.sitemap-link-list {
+    text-align: center;
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    display: none;
+}
+
+/*layout for index-gallery-images-container*/
+.index-gallery-images-container {
+    display: grid;
+    grid-template: repeat(1, 1fr) / repeat(3, 1fr);
+}
+
+/*layout for index-gallery*/
+.index-gallery{
+    height: fit-content;
+    align-self: center;
+    padding:5px;
+}
+
+/*layout for index-gallery img*/
+.index-gallery img {
+    height: auto;
+    width: 100%;
+}
+
+/*layout for banner image-container*/
+.image-container {
+    position: relative;
+    width: 100%;
+}
+
+/*layout for banner background image*/
+.index-header-image-1 {
+    width: 100%;
+    margin-top: 7px;
+}
+
+/*layout for banner foreground image*/
+.index-header-image-2 {
+    position: absolute;
+    width: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*layout for max width*/
+@media screen and (max-width: 400px) {
+    .sitemap-container-1 {
+        grid-template: repeat(1, 1fr) / repeat(1, 1fr);
+    }
+    
+    .sitemap-container-2 {
+        grid-template: repeat(1, 1fr) / repeat(1, 1fr);
+    }
+
+    .gallery-container {
+        grid-template: repeat(1, 1fr) / repeat(1, 1fr);
+    }
+
+    .index-header-image-1 {
+        margin-top: 0;
+    }
+
+    header {
+        margin-top: 84px;
+    }
+    
+    .radio-container label {
+        margin-left: -12%;
+    }
+}
+
+/*layout for max width*/
+@media screen and (max-width: 560px) {
+    .footer-container {
+        display: block;
+    }
+    
+    .small-logo-container {
+        margin: 0 auto;
+        float: none;
+        padding-left: 0;
+    }
+    
+    .validation-images-container {
+        padding-right: 0;
+    }
+}
+
+/*layout for max width*/
+@media screen and (max-width: 620px) {
+    .radio-container p {
+        display: flex;
+        position: inherit;
+        left: auto;
+        margin-left: auto;
+    }
+
+    .email-label, .select-label, .name-label{
+        display: block;
+        text-align: center;
+        margin-left: 3%;
+    }
+
+    .message-container label {
+        display: inline-grid;
+    }
+
+    .message-box {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/*layout for when screen is between 401px and 500px wide*/
+@media screen and (max-width: 500px) and (min-width: 461px){
+    .gallery-container {
+        grid-template: repeat(1, 1fr) / repeat(2, 1fr);
+    }
+}
+
+/*layout for max width*/
+@media screen and (max-width: 460px) {
+    .navbar {
+        display: flow-root;
+        justify-content: start;
+        animation: fade_out_show 0.5s;
+
+    }
+
+    .navbar-center-container {
+        justify-content: space-between;
+    }
+
+    .navbar-left-container {
+        display: flex;
+        margin-left: 3px;
+
+
+    }
+
+    .navbar-right-container {
+        display: flex;
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-right: 0;
+    }
+}
+
+/*layout for min width*/
+@media screen and (min-width: 461px) {
+    .navbar{
+        display: flex;
+        animation: fade_in_show 0.5s;
+
+    }
+}
+
+/*layout for max width*/
+@media screen and (max-width: 258px) {
+    .navbar-center-container{
+        display: block;
+        justify-content: start;
+        animation: fade_in_show 0.5s;
+        float: left;
+
+    }
+    
+    
+}
+
+/*layout for max width*/
+@media screen and (max-width: 172px) {
+    .navbar-right-container {
+        position: initial;
+        float: left;
+    }
+
+
+}
+
+/*animating navbar when it changes layout */
+@keyframes fade_out_show {
+    0% {
+        opacity: 0;
+        transition: opacity 250ms ease;
+    }
+
+    100% {
+        opacity: 1;
+        transition: opacity 250ms ease;
+    }
+}
+
+/*animating navbar when it changes layout */
+@keyframes fade_in_show {
+    0% {
+        opacity: 0;
+        transition: opacity 250ms ease;
+    }
+
+    100% {
+        opacity: 1;
+        transition: opacity 250ms ease;
+    }
+}

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="author" content="Justin" />
+    <meta charset="UTF-8">
+    <title>Order</title>
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito">
+</head>
+<body>
+    <!-- navbar-->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-left-container">
+            <div class="navbar-main-titles">
+                <a href="index.html">Home</a>
+            </div>
+        </div>
+        
+        <div class="navbar-center-container">
+            <div class="dropdown">
+                <button class="drop-down-button ">Products</button>
+                
+                <div class="dropdown-content">
+                    <a href="products.html">Products</a>
+                    <a href="products.html#on-sale">On sale</a>
+                    <a href="products.html#popular-products">Popular products</a>
+                    <a href="products.html#recommended-products">Recommended products</a>
+                    <a href="products.html#product-inventory">Product inventory</a>
+                </div>
+            </div>
+            
+            <div class="dropdown">
+                <button class="drop-down-button">About</button>
+                
+                <div class="dropdown-content">
+                    <a href="about.html">about</a>
+                    <a href="about.html#about-employees">About employees</a>
+                    <a href="about.html#news-about-good-gums">News about good gums</a>
+                    <a href="about.html#history-of-good-gums">History of good gums</a>
+                    <a href="about.html#achievements-of-good-gums">Achievements of good gums</a>
+                </div>
+            </div>
+                
+            <div class="navbar-main-titles">
+                <a class="current-page">Order</a>
+            </div>
+        </div>
+        
+        <div class="navbar-right-container">
+            <div class="navbar-main-titles"><a href="sitemap.html">Site map</a></div>
+        </div>
+    </nav>
+    
+    <header><h1>Order Form</h1></header>
+    
+    <main>
+        <!-- form for ordering-->
+        <form method="get" action="response.html">
+            
+            <!-- label and input for full name-->
+            <label for="FullName" class="name-label">Full name:</label>
+            <input id="FullName" name="FullName" class="contact-box" type="text" placeholder="John Smith" autofocus required maxlength="50" 
+                   pattern="[a-zA-Z0-9\s]+"
+                   title="must only contain letters"/>
+            <br />
+            
+            <!-- label and input for email-->
+            <label for="email" class="email-label">E-mail:</label>
+            <input id="email" name="email" class="contact-box" type="email" placeholder="JohnSmith@email.com" required maxlength="50"
+                   pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$"
+                   title="please enter your email eg. email@email.com"/>
+            <br />
+            
+            <!-- label and select for available-plants-->
+            <label for="available-plants" class="select-label">Avilable Plants:</label>
+            <select id="available-plants" name="available-plants" class="select-box">
+                <option id="Acacia-pycnantha" value="Acacia pycnantha">Acacia pycnantha</option>
+                <option id="Angophora-costata" value="Angophora costata">Angophora costata</option>
+                <option id="Anigozanthos-flavidus" value="Anigozanthos flavidus ">Anigozanthos flavidus </option>
+                <option id="Boronia-serrulata" value="Boronia serrulata">Boronia serrulata</option>
+                <option id="Callistemon-citrinus" value="Callistemon citrinus">Callistemon citrinus</option>
+                <option id="Correa-federation-bell-x-mannii" value="Correa federation bell x mannii">Correa federation bell x mannii</option>
+                <option id="Corymbia-ficifolia" value="Corymbia ficifolia">Corymbia ficifolia</option>
+                <option id="Eucalyptus-caesia" value="Eucalyptus caesia">Eucalyptus caesia</option>
+                <option id="Eucalyptus-pauciflora" value="Eucalyptus pauciflora">Eucalyptus pauciflora</option>
+                <option id="Grevillea-alpina-x-rosmarinifolia" value="Grevillea alpina x rosmarinifolia">Grevillea alpina x rosmarinifolia</option>
+                <option id="Grevillia-robusta" value="Grevillia robusta">Grevillia robusta</option>
+                <option id="Hardenbergia-violacea" value="Hardenbergia violacea">Hardenbergia violacea</option>
+                <option id="Poa-labillardierei" value="Poa labillardierei">Poa labillardierei</option>
+                <option id="Syzygium-smithii" value="Syzygium smithii">Syzygium smithii</option>
+                <option id="Telopea-speciosissima" value="Telopea speciosissima">Telopea speciosissima</option>
+            </select>
+            <br />
+            
+            <!-- custom radio for selecting plant stage-->
+            <div class="radio-container">
+                <p class="p-container-top-bottom-margin-0">Please select plant stage:</p>
+                <label for="sprout" class="container-for-radio">
+                    <span class="radio-text">Sprout</span>
+                    <input type="radio" id="sprout" name="plant-stage" value="sprout" checked>
+                    <span class="checkmark-radio"></span>
+                </label>
+                <br />
+                <label for="seedling" class="container-for-radio">
+                    <span class="radio-text">Seedling</span>
+                    <input type="radio" id="seedling" name="plant-stage" value="seedling">
+                    <span class="checkmark-radio"></span>
+                </label>
+                <br />
+                <label for="adult-plant" class="container-for-radio">
+                    <span class="radio-text">Adult Plant</span>
+                    <input type="radio" id="adult-plant" name="plant-stage" value="adult plant">
+                    <span class="checkmark-radio"></span>
+                </label>
+                <br />
+            </div>
+
+            <!-- custom message box-->
+            <div class="message-container">
+                <label for="message">Message:
+                    <textarea id="message" name="message" class="message-box" rows="6" cols="60" placeholder="Type message here" maxlength="1000"></textarea>
+                </label>
+            </div>
+            <br />
+
+            <!-- custom checkbox to confirm order-->
+            <div class="container-for-checkbox">
+                <label for="checkmark">Confirm
+                    <input id="checkmark" name="checkmark"  type="checkbox" required>
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+            <br />
+            
+            <input class="button" type="submit" value="submit" id="submit-button" />
+        </form>
+    </main>
+
+    <!-- footer containing contact information, validation images, GoodGums logo and copyright statement-->
+    <footer>
+        <div class="footer-container">
+            <div class="contact-us-container">
+                <ul>
+                    <li>contact us:</li>
+                    <li>Email: admin@goodgums.com.au</li>
+                    <li>phone: 9300 0000</li>
+                </ul>
+            </div>
+
+            <div class="validation-images-container-2">
+                <div class="validation-image">
+                    <a href="https://validator.w3.org">
+                        <img src="images/HTML5.png" alt="valid_html5" height="64" />
+                    </a>
+                </div>
+
+                <div class="validation-image">
+                    <a href="https://jigsaw.w3.org/css-validator">
+                        <img src="images/CSS3.png" alt="valid_css3" height="64" />
+                    </a>
+                </div>
+            </div>
+
+            <div class="small-logo-container">
+                <img src="images/GoodGums-logo-sm.png" alt="GoodGums-logo-sm" height="65">
+            </div>
+        </div>
+        <p>Good Gums 2020</p>
+    </footer>
+</body>
+</html>
